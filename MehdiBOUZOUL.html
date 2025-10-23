@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehdi BOUZOUL - Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 15%, #16213e 35%, #0f3460 50%, #533a7d 70%, #8b5a8c 85%, #a0616a 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated background shapes */
+        .bg-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.08);
+            animation: float 6s ease-in-out infinite;
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+        }
+
+        .shape:nth-child(1) {
+            width: 120px;
+            height: 80px;
+            border-radius: 15px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+            transform: rotate(15deg);
+        }
+
+        .shape:nth-child(2) {
+            width: 90px;
+            height: 140px;
+            border-radius: 12px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+            transform: rotate(-20deg);
+        }
+
+        .shape:nth-child(3) {
+            width: 100px;
+            height: 60px;
+            border-radius: 10px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+            transform: rotate(25deg);
+        }
+
+        .shape:nth-child(4) {
+            width: 80px;
+            height: 120px;
+            border-radius: 8px;
+            top: 10%;
+            right: 30%;
+            animation-delay: 1s;
+            transform: rotate(-10deg);
+        }
+
+        .shape:nth-child(5) {
+            width: 110px;
+            height: 70px;
+            border-radius: 14px;
+            bottom: 40%;
+            right: 20%;
+            animation-delay: 3s;
+            transform: rotate(30deg);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(var(--start-rotation, 0deg));
+            }
+            50% {
+                transform: translateY(-20px) rotate(calc(var(--start-rotation, 0deg) + 180deg));
+            }
+        }
+
+        /* Glass effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Header styles */
+        header {
+            padding: 30px 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 45px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            text-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 28px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-links a:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Bio Section */
+        #bio {
+            padding: 80px 20px;
+        }
+
+        .hero-content {
+            padding: 60px 50px;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .gradient-text {
+            font-size: 3.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ffffff 0%, #a0c4ff 50%, #ffd6ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            text-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Skills Section */
+        #skills {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 60px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            padding: 35px 30px;
+            text-align: center;
+            color: white;
+            transition: all 0.4s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Contacts Section */
+        #contacts {
+            padding: 80px 20px;
+        }
+
+        .cta-content {
+            padding: 60px 50px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 45px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 80px;
+            padding: 40px 20px;
+        }
+
+        .footer-content {
+            padding: 35px 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 25px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-links a:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 25px;
+                padding: 20px 25px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
+
+            .nav-links a {
+                text-align: center;
+                width: 100%;
+            }
+
+            .gradient-text {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .hero-content {
+                padding: 40px 30px;
+            }
+
+            .cta-content {
+                padding: 40px 30px;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-links a {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background Shapes -->
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav class="glass">
+            <a href="index.html" class="logo">Mehdi BOUZOUL</a>
+            <ul class="nav-links">
+                <li><a href="#bio">Bio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contacts">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bio Section -->
+    <section id="bio">
+        <div class="container">
+            <div class="glass hero-content">
+                <h1 class="gradient-text">Mehdi BOUZOUL</h1>
+                <p class="lead">Creative Developer and Event Manager with expertise in AI, full-stack development, and UI/UX design. Proven ability to work under pressure while delivering innovative solutions. Experienced in managing complex tech events and coordinating cross-functional teams. Strong background in machine learning, web development, and project management with a focus on user-centered design principles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="features-grid">
+                <div class="glass feature-card">
+                    <div class="feature-icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>Advanced proficiency in Python for AI/ML and backend development</p>
+                </div>
+                <div class="glass feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>C++</h3>
+                    <p>Strong foundation in systems programming and algorithms</p>
+                </div>
+                <div class="glass feature-card">
+                    <div class="feature-icon">⚛️</div>
+                    <h3>React</h3>
+                    <p>Building dynamic and responsive user interfaces</p>
+                </div>
+                <div class="glass feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Tailwind CSS</h3>
+                    <p>Modern utility-first CSS framework expertise</p>
+                </div>
+                <div class="glass feature-card">
+                    <div class="feature-icon">▲</div>
+                    <h3>Next.js</h3>
+                    <p>Full-stack React framework for production applications</p>
+                </div>
+                <div class="glass feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>JavaScript</h3>
+                    <p>Modern ES6+ JavaScript and TypeScript development</p>
+                </div>
+                <div class="glass feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>CSS & HTML</h3>
+                    <p>Semantic HTML and advanced CSS techniques</p>
+                </div>
+                <div class="glass feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI/Machine Learning</h3>
+                    <p>Deep learning, neural networks, and ML model development</p>
+                </div>
+                <div class="glass feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered design principles and prototyping</p>
+                </div>
+                <div class="glass feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Event Management</h3>
+                    <p>Planning and executing complex technical events</p>
+                </div>
+                <div class="glass feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Project Management</h3>
+                    <p>Agile methodologies and cross-functional team coordination</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts">
+        <div class="container">
+            <div class="glass cta-content">
+                <h2>Get In Touch</h2>
+                <p>Connect with me on GitHub or reach out for collaboration opportunities</p>
+                <a href="https://github.com/MehdiBouzoul" target="_blank" class="cta-button">
+                    Visit My GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="glass footer-content">
+                <p>&copy; 2024 Mehdi BOUZOUL. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/MehdiBouzoul" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
