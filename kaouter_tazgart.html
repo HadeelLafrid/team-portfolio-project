@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Kaouter Tazgart</title>
+    <link rel="stylesheet" href="kaouter_tazgart.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- NAVIGATION HEADER -->
+    <header>
+        <div class="container">
+            <nav class="glass">
+                 
+                <div class="logo" onclick="showPage('home')">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 48 48" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="5" opacity="0.9"/>
+                            <circle cx="32" cy="16" r="4" opacity="0.8"/>
+                            <circle cx="16" cy="32" r="4" opacity="0.7"/>
+                            <circle cx="32" cy="32" r="5" opacity="0.85"/>
+                            <circle cx="24" cy="8" r="2" opacity="1"/>
+                            <circle cx="8" cy="24" r="2" opacity="0.9"/>
+                            <circle cx="40" cy="24" r="2" opacity="0.9"/>
+                            <circle cx="24" cy="40" r="2" opacity="1"/>
+                            <circle cx="8" cy="8" r="1" opacity="0.6"/>
+                            <circle cx="40" cy="8" r="1" opacity="0.6"/>
+                            <circle cx="8" cy="40" r="1" opacity="0.6"/>
+                            <circle cx="40" cy="40" r="1" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <span>My Portfolio</span>
+                </div>
+
+              
+
+                <div class="nav-links">
+                    <a href="#" onclick="showPage('home')" class="active">Home</a>
+                    <a href="#" onclick="showPage('about')">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#" onclick="showPage('contact')">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass">
+                    <div class="hero-image">
+                    <img src="images/me.jpg" alt="me" />
+                    </div>
+                    <div class="hero-content">
+                        <h1>Kaouter Tazgart</h1>
+                        <p>I’m Kaouther Tazgart, a third-year Artificial Intelligence engineering student at ENSIA, Sidi Abdellah, Algeria. With strong academic foundation and hands-on experience in AI and web development, I’m passionate about designing intelligent systems that solve real-world problems and make technology more accessible.</p>
+                        <a href="#" class="cta-button" onclick="showPage('about')">Learn More</a>
+                    </div>
+                </section>
+
+                <div id="skills" class="skills"> 
+                    <h2>Skills</h2>
+                    <section class="features">
+                        <!-- Technical Skills -->
+                        <div class="feature-card glass">
+                            <div class="feature-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <h3>Technical Skills</h3>
+                            <ul class="skills-list">
+                                <li><i class="fa-solid fa-globe"></i> Web Development</li>
+                                <li><i class="fa-solid fa-mobile-screen-button"></i> Mobile Development</li>
+                                <li><i class="fa-brands fa-figma"></i> Figma (UI/UX Design)</li>
+                                <li><i class="fa-brands fa-git-alt"></i> Git</li>
+                                <li><i class="fa-brands fa-github"></i> GitHub</li>
+                                <li><i class="fa-solid fa-code"></i> C++</li>
+                                <li><i class="fa-brands fa-python"></i> Python</li>
+                                <li><i class="fa-brands fa-html5"></i> HTML</li>
+                                <li><i class="fa-brands fa-js"></i> JavaScript</li>
+                                <li><i class="fa-solid fa-brain"></i> Artificial Intelligence</li>
+                                <li><i class="fa-solid fa-robot"></i> Machine Learning</li>
+                                <li><i class="fa-solid fa-pen-ruler"></i> UI/UX Design</li>
+                            </ul>
+                        </div>
+
+                        <!-- Soft Skills -->
+                        <div class="feature-card glass">
+                            <div class="feature-icon"><i class="fa-solid fa-people-group"></i></div>
+                            <h3>Soft Skills</h3>
+                            <ul class="skills-list">
+                                <li>👥 Team Collaboration</li>
+                                <li>🗣 Communication</li>
+                                <li>🧩 Problem Solving</li>
+                                <li>⏱ Time Management</li>
+                                <li>📅 Project Management</li>
+                                <li>🎤 Event Management</li>
+                                <li>🚀 Leadership</li>
+                                <li>💡 Creativity</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="about-content">
+                    <div class="about-text glass">
+                        <h2>About me</h2>
+                       <p>Hi! I’m Kaouther Tazgart, a third-year AI engineering student at ENSIA.
+I love building smart systems that connect technology with real-world needs.
+Outside of classes, I’m active in tech clubs and enjoy collaborating on creative, impactful projects.</p>
+                        <a href="file:///C:/Users/pc%20cam/Downloads/CV_kaouter_Tazgart.pdf" download class="btn-glass white-btn">📄 Download CV</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+<section class="informations"> <h2>🎓 Education & Experience</h2> <div class="info-grid">
+     <!-- Education --> <div class="info-member glass"> <div class="info-avatar">🎓</div> <h3>Education</h3> <p class="role">Academic Journey</p> <ul class="bio"> <li><strong>National Higher School of Artificial Intelligence (ENSIA)</strong><br> Artificial Intelligence Engineering Degree (2023 – 2028) </li> <li><strong>Baccalaureate in Mathematics</strong><br> Graduated in 2023 with a score of <strong>18.54 / 20</strong> </li> </ul> </div>
+       <!-- Experience & Projects --> 
+        <div class="info-member glass"> <div class="info-avatar">💼</div> <h3>Experience & Projects</h3> <p class="role">Practical Work & Achievements</p> <ul class="bio"> <li> <strong>Internship — Neuroncowork</strong> (Fall 2024)<br> Contributed to collaborative tech projects and applied AI-based solutions. </li> <li> <strong>Selected Projects:</strong> <ul> <li>Smart Farming Resource Optimization (AI / CSP / Genetic Algorithms)</li> <li>Timetable Generator using CSP</li> <li>Portfolio Website </li> <li>School Management System (Web)</li> <li>Travel Agency Website (Full-stack)</li> </ul> </li> </ul> </div> <!-- Clubs & Hackathons --> <div class="info-member glass"> <div class="info-avatar">🚀</div> <h3>Clubs & Hackathons</h3> <p class="role">Community & Collaboration</p> <p class="bio"> <strong>Scientific Clubs:</strong><br> • Event manager several in EBEC<br> • Active member in several clubs: etc , skill&tell<br> • Organized and mentored workshops in AI, programming, and innovation.<br><br> <strong>Hackathons & Competitions:</strong><br> • Participated in multiple national hackathons focused on AI and sustainability (Mathurance).<br> • Collaborated with diverse teams to design innovative solutions under pressure.<br> • Recognized for creativity, teamwork, and technical problem-solving. </p> </div> </div> </section>
+
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="contact-grid">
+                    <div class="contact-form glass">
+                        <h2>Contact Me</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Tell me about your suggestions..." required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info glass">
+                        <h2>Contact Information</h2>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📧</div>
+                            <div class="contact-item-text"><h4>Email</h4><p>kaouter.tazgart@ensia.edu.dz</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div class="contact-item-text"><h4>Phone</h4><p>+213 784305434</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div class="contact-item-text"><h4>Address</h4><p>Boumerdes, Algeria</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🕒</div>
+                            <div class="contact-item-text"><h4><a href="https://www.linkedin.com/in/kaouther-tazgart-b180442a4" target="_blank">LinkedIn</a></h4></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fa-brands fa-github"></i></div>
+                            <div class="contact-item-text"><h4><a href="https://github.com/kaoutertazgart" target="_blank">GitHub</a></h4></div>
+                        </div>
+                        <a href="file:///C:/Users/pc%20cam/Downloads/CV_kaouter_Tazgart.pdf" download class="btn-glass white-btn">📄 Download CV</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <div class="container">
+            <footer class="glass">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="#" onclick="showPage('about')">About Us</a>
+                        <a href="#" onclick="showPage('contact')">Contact</a>
+                    </div>
+                    <div class="copyright">&copy; 2025 Kaouther Tazgart. All rights reserved.</div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Simple page switcher
+        function showPage(pageId){
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            // Update nav link active state
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            document.querySelector(`.nav-links a[onclick="showPage('${pageId}')"]`)?.classList.add('active');
+        }
+    </script>
+
+
+    <script src="kaouter_tazgart.js"></script>
+</body>
+</html>
